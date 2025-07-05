@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { useSearchStore } from "../store/searchStore";
 import { useChatStore } from "../store/chatStore";
@@ -11,16 +11,15 @@ const Input = () => {
   const { input, setInput, history, addToHistory } = useSearchStore();
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
-  const [isHovered, setIsHovered] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const onboardingSuggestions = [
+  const onboardingSuggestions = useMemo(() => [
     "Why should you hire me?",
     "What do i bring to the table?",
     "What are my key strengths?",
     "How can i contribute to the team?",
     "What makes me a good fit for this role?",
-  ];
+  ], []);
 
   useEffect(() => {
     if (input.trim()) {
@@ -102,8 +101,6 @@ const Input = () => {
     );
   };
 
- 
-
   return (
     <div
       style={{
@@ -129,8 +126,6 @@ const Input = () => {
           //   transition: "all 200ms",
           //   borderBottom: "none",
         }}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
       >
         <form className="" onSubmit={handleSubmit}>
           <div

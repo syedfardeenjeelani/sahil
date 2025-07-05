@@ -3,15 +3,6 @@ import React from "react";
 import Image from "next/image";
 
 const HomeNavbar = () => {
-  const linkStyleBase = {
-    color: "#1F1F1F",
-    fontFamily: "Arial, sans-serif",
-    fontSize: "14px",
-    padding: "5px",
-    textDecoration: "none" as const,
-    display: "inline-block",
-    height: "26.8px",
-  };
   return (
     <div
       style={{
