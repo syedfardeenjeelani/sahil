@@ -11,3 +11,6 @@ body {
   color: var(--foreground);
   font-family: Arial, sans-serif;
 }
+
+.open-sans{
+  font-family: "Open Sans", sans-serif; }

@@ -19,7 +19,8 @@ const HomeNavbar = () => {
       }}
       className="max-w-[1520px] h-[60px] flex items-center   "
     >
-      <Link href={'/about'}
+      <Link
+        href={"/about"}
         style={{
           margin: "0px 5px 0px 15px",
         }}
@@ -27,7 +28,10 @@ const HomeNavbar = () => {
       >
         About
       </Link>
-      <Link href={''} className=" w-[43.46px] hover:underline hover:cursor-pointer  h-[26.8px] text-[13px] text-[#1F1F1F] p-[5px] mt-[0px] mb-[0px]  ml-[5px] mr-[5px]  ">
+      <Link
+        href={""}
+        className=" w-[43.46px] hover:underline cursor-not-allowed  h-[26.8px] text-[13px] text-[#1F1F1F] p-[5px] mt-[0px] mb-[0px]  ml-[5px] mr-[5px]  "
+      >
         Store
       </Link>
       <div className=" w-full flex justify-end items-center h-[52px] ">
@@ -36,15 +40,17 @@ const HomeNavbar = () => {
             margin: "0px 11px 4px 15px",
           }}
         >
-          <Link href={''}
-            className="text-[12px] hover:underline hover:cursor-pointer text-[#000000DE]  "
+          <Link
+            href={""}
+            className="text-[12px] hover:underline cursor-pointer text-[#000000DE]  "
             // href=""
           >
-            Gmail
-          </Link >
-          <Link href={''}
+            Projects
+          </Link>
+          <Link
+            href={""}
             style={{ paddingLeft: "15px" }}
-            className="text-[12px] hover:underline hover:cursor-pointer text-[#000000DE]  "
+            className="text-[12px] cursor-not-allowed hover:underline  text-[#000000DE]  "
             // href=""
           >
             Images
@@ -60,21 +66,26 @@ const HomeNavbar = () => {
             justifyContent: "center",
             marginBottom: "4px",
             marginLeft: "8px",
+            cursor: "not-allowed",
           }}
-          className="w-[38px] h-[38px] hover:bg-[#E2E3E3] transition-colors duration-200 rounded-[50%]  items-center flex justify-center  cursor-pointer  "
+          className="w-[38px] cursor-not-allowed h-[38px] hover:bg-[#E2E3E3] transition-colors duration-200 rounded-[50%]  items-center flex justify-center    "
         >
-          <Link href={''}
+          <Link
+            href={""}
             aria-label="Search Labs"
             // href="https://labs.google.com/search?source=hp"
             target="_top"
+            className="cursor-not-allowed"
             role="button"
             tabIndex={0}
-            style={{
-              cursor: "pointer",
-            }}
+            style={
+              {
+                //   cursor: "pointer",
+              }
+            }
           >
             <svg
-              className="gb_E"
+              className="gb_E cursor-not-allowed"
               focusable="false"
               height="22px"
               fill="#5f6368"
@@ -96,9 +107,10 @@ const HomeNavbar = () => {
             marginBottom: "4px",
             marginLeft: "4px",
           }}
-          className="w-[48px] h-[48px] hover:bg-[#E2E3E3] transition-colors duration-200 rounded-[50%]  items-center flex justify-center  cursor-pointer  "
+          className="w-[48px] cursor-not-allowed h-[48px] hover:bg-[#E2E3E3] transition-colors duration-200 rounded-[50%]  items-center flex justify-center  "
         >
-          <Link href={''}
+          <Link
+            href={""}
             aria-label="Search Labs"
             target="_top"
             role="button"
@@ -112,7 +124,7 @@ const HomeNavbar = () => {
               display: "inline-block",
               height: "32px",
               padding: "4px",
-              position: "relative",
+              //   position: "relative",
               width: "32px",
               WebkitTapHighlightColor: "transparent",
               WebkitBoxSizing: "border-box",
@@ -120,10 +132,13 @@ const HomeNavbar = () => {
               float: "right",
               outline: "none",
               textDecoration: "none",
-              cursor: "pointer",
             }}
           >
-            <svg className="gb_F" focusable="false" viewBox="0 0 24 24">
+            <svg
+              className="gb_F cursor-not-allowed"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
               <path
                 fill="#5f6368"
                 d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"
@@ -131,6 +146,7 @@ const HomeNavbar = () => {
               <image
                 // src="https://ssl.gstatic.com/gb/images/bar/al-icon.png"
                 // alt=""
+                className="cursor-not-allowed"
                 height={24}
                 width={24}
                 style={{ border: "none", display: "none 9" }}
@@ -147,21 +163,21 @@ const HomeNavbar = () => {
             alignItems: "center",
             justifyContent: "center",
             marginBottom: "4px",
+            cursor: "not-allowed",
             marginLeft: "6px",
           }}
-          className="w-[38px] h-[38px] hover:bg-[#E2E3E3]   transition-colors duration-200 rounded-[50%]  items-center flex justify-center cursor-pointer  "
+          className="w-[38px] h-[38px] hover:bg-[#E2E3E3]   transition-colors duration-200 rounded-[50%]  items-center flex justify-center cursor-not-allowed  "
         >
-          <Link href={''}
+          <Link
+            href={""}
             aria-label="Search Labs"
             // href="https://labs.google.com/search?source=hp"
             target="_top"
             role="button"
             tabIndex={0}
-            style={{
-              cursor: "pointer",
-            }}
           >
             <img
+              className="cursor-not-allowed"
               style={{ borderRadius: "50%", height: 28, width: 28 }}
               src="/icon.jpg"
               alt=""
