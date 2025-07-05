@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const HomeNavbar = () => {
   const linkStyleBase = {
@@ -176,7 +177,7 @@ const HomeNavbar = () => {
             role="button"
             tabIndex={0}
           >
-            <img
+            <Image
               className="cursor-not-allowed"
               style={{ borderRadius: "50%", height: 28, width: 28 }}
               src="/icon.jpg"

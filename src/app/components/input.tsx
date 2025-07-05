@@ -37,7 +37,7 @@ const Input = () => {
       setFilteredSuggestions(onboardingSuggestions);
       setShowSuggestions(false);
     }
-  }, [input, history]);
+  }, [input, history, onboardingSuggestions]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

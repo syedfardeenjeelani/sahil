@@ -9,7 +9,7 @@ const About = () => {
   const [audioStarted, setAudioStarted] = useState(false);
   const [canStartTyping, setCanStartTyping] = useState(false);
 
-  const audioRef : any = useRef<HTMLAudioElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const fullText = `Hey Sahil, thank you so much for replying. That alone means a lot to me.
 
@@ -76,7 +76,9 @@ Thank you for letting me share this with you. Whether or not it leads to anythin
           }}
           onClick={() => {
             
+       if(audioRef.current){
         audioRef.current.pause();
+       }
             window.history.back();
           }}
           className="border h-[32px] w-[32px] rounded-[50%] justify-center items-center flex border-gray-300 bg-gray-100 text-gray-800 cursor-pointer hover:shadow-md hover:bg-gray-200 transition"

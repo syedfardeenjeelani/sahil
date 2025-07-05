@@ -45,7 +45,6 @@ export default function Chat() {
     messages: storeMessages,
     addMessage,
     addUserMessage,
-    clearMessages,
   } = useChatStore();
 
   // On mount: initialize from store

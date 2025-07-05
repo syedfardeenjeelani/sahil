@@ -3,7 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 
 type ChatResponse = {
   answer: string;
-  results: any;
+  results: unknown;
 };
 
 export const useChat = () => {

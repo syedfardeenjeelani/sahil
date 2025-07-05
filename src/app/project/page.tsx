@@ -69,12 +69,12 @@ const projects = [
 ];
 
 export default function ProjectPage() {
-  const [visibleProjects, setVisibleProjects] : any = useState([]);
+  const [visibleProjects, setVisibleProjects] = useState<number[]>([]);
 
   useEffect(() => {
     projects.forEach((_, index) => {
       setTimeout(() => {
-        setVisibleProjects((prev:any) => [...prev, index]);
+        setVisibleProjects((prev: number[]) => [...prev, index]);
       }, index * 100);
     });
   }, []);

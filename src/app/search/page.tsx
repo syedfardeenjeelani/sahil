@@ -6,6 +6,13 @@ import { useQuery } from "@tanstack/react-query";
 import { searchApi } from "../../../lib/api";
 import Link from "next/link";
 
+
+interface SearchResult {
+  title: string;
+  url: string;
+  description: string;
+}
+
 const SearchResults = () => {
   const searchParams = useSearchParams();
   const query = searchParams.get("q") || "";
@@ -405,7 +412,7 @@ const SearchResults = () => {
           </p>
         </div>
 
-        {searchResults?.results?.map((result: any, index: number) => (
+        {searchResults?.results?.map((result: SearchResult, index: number) => (
           <div
             key={index}
             className="border-b border-gray-100 pb-6"
@@ -447,7 +454,7 @@ const SearchResults = () => {
               className="text-xl font-normal text-gray-800"
               style={{ marginBottom: "16px" }}
             >
-              No results found for "{query}"
+              No results found for &quot;{query}&quot;
             </h2>
             <p className="text-gray-600" style={{ marginBottom: "24px" }}>
               Try checking your spelling or use more general terms
