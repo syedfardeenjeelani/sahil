@@ -33,7 +33,7 @@ const HomeNavbar = () => {
           }}
         >
           <Link
-            href={""}
+            href={"/project"}
             className="text-[12px] hover:underline cursor-pointer text-[#000000DE]  "
             // href=""
           >
@@ -169,6 +169,8 @@ const HomeNavbar = () => {
             tabIndex={0}
           >
             <Image
+            height= {28}
+             width= {28} 
               className="cursor-not-allowed"
               style={{ borderRadius: "50%", height: 28, width: 28 }}
               src="/icon.jpg"
